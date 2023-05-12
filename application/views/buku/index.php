@@ -79,12 +79,12 @@
                         <input type="text" class="form-control form-control-user" id="judul_buku" name="judul_buku" placeholder="Masukkan Judul Buku">
                     </div>
                     <div class="form-group">
-                        <select name="id_kategori" class="form-control form-control-user">
+                    <select name="kategori" class="form-control form-control-user">
                             <option value="">Pilih Kategori</option>
                             <?php
-                            foreach ($kategori as $k) { ?>
-                                <option value="<?= $k['id']; ?>"><?=
-                                                                $k['kategori']; ?></option>
+                            $k = ['Sains', 'Hobby', 'Komputer', 'Komunikasi', 'Hukum', 'Agama', 'Populer', 'Bahasa', 'Komik'];
+                            for ($i = 0; $i < 9; $i++) { ?>
+                                <option value="<?= $k[$i]; ?>"><?= $k[$i]; ?></option>
                             <?php } ?>
                         </select>
                     </div>

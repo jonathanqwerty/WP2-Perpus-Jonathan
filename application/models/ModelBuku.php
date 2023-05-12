@@ -2,6 +2,10 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class ModelBuku extends CI_Model
 {
+    public function tampil($where = null)
+    {
+        return $this->db->get_where('buku', $where);
+    }
     //manajemen buku
     public function getBuku()
     {
